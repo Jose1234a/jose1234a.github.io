@@ -1,0 +1,499 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+
+
+/*HEADER SUPERIOR*/
+.header__superior{
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 10;
+
+}
+
+.logo img{
+  width: 80px;
+  margin-left: 22px;
+
+}
+.search input{
+  width: 300px;
+  padding: 10px;
+}
+
+
+
+.contenedor-hamburguesa{
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.container-carrusel{
+  width: 50%;
+  margin: auto;
+}
+.carrusel-ancho{
+  width: 300px;
+  margin: auto;
+}
+.btn-reserva-slider{
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid wheat;
+  color: white;
+  padding: 15px;
+}
+.btn-reserva-slider:hover{
+  background-color: white;
+  border: 1px solid wheat;
+  color: black;
+  padding: 15px;
+  
+}
+
+.li-menu:hover{
+  transition: all 300ms ease;
+  border-top: 1px solid #b77843;
+
+}
+
+.li-menu a{
+  color: black;
+  font-family: 'Raleway', sans-serif;
+}
+.li-menu a:hover{
+  color: #b77843;
+  font-family: 'Raleway', sans-serif;
+}
+
+h1, h3{
+  font-family: 'Raleway', sans-serif;
+}
+
+
+                              /**Buscador*/
+
+                              .searchbar{
+                                margin-bottom: auto;
+                                margin-top: auto;
+                                height: 60px;
+                                background-color: #353b48;
+                                border-radius: 30px;
+                                padding: 10px;
+                                }
+                            
+                                .search_input{
+                                color: white;
+                                border: 0;
+                                outline: 0;
+                                background: none;
+                                width: 0;
+                                caret-color:transparent;
+                                line-height: 40px;
+                                transition: width 0.4s linear;
+                                }
+                            
+                                .searchbar:hover > .search_input{
+                                padding: 0 10px;
+                                width: 450px;
+                                caret-color:red;
+                                transition: width 0.4s linear;
+                                }
+                            
+                                .searchbar:hover > .search_icon{
+                                background: white;
+                                color: #e74c3c;
+                                }
+                            
+                                .search_icon{
+                                height: 40px;
+                                width: 40px;
+                                float: right;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                border-radius: 50%;
+                                color:white;
+                                text-decoration:none;
+                                }
+
+                              /**FIN DE BUSCADOR*/
+
+
+
+/*fin del HEADER**/
+
+
+.parallax {
+    /* The image used */
+    background-image: url(../accests/Fachada\ deposito\ trujillo.jpg);
+  
+    /* Full height */
+    height: 500px;
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+  }
+  .boton-quienes-somos{
+    border: 2px solid#b77843;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 20px;
+    color: #b77843;
+    font-size: 19px;
+    font-family: 'Comfortaa', cursive;
+  
+  }
+  .boton-quienes-somos:hover { 
+    border: 2px solid#b77843;
+    background-color: #b77843;
+    color: white;
+    animation-duration: 3s;
+    animation-name: slidein;
+    animation-iteration-count: infinite;
+
+  }
+
+ /**articulos mas visitados**/
+
+ .boton-mas-info-articulos-mas-vicitados{                     /**boton mas INFO... ARTICULOS MAS VICITADOS**/
+  background-color: maroon;
+  color: white;
+  border: 1px solid white;
+  text-decoration: none;
+ }
+ .boton-mas-info-articulos-mas-vicitados a{
+  text-decoration: none;
+  color: white;
+ }
+ .boton-mas-info-articulos-mas-vicitados a:hover{
+  text-decoration: none;
+  color: maroon;
+ }
+ .boton-mas-info-articulos-mas-vicitados:hover{
+  background-color: white;
+  color: maroon;
+  border: 1px solid maroon;
+ }
+
+
+ .img-articulo-cemento-gris-cemex{                /**cemento gris cemex**/
+  background-image: url(../accests/cemento\ 2.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+ }
+ .cemento-gris-cemex:hover{
+  opacity: 0;
+  cursor: pointer;
+  transition: all 500ms ease;
+  transform: scale(1.1);
+}
+ .img-articulo-teja-master-1000-roja{                   /**TEJA MASTER 1000 ACESCO roja**/
+  background-image: url(../accests/teja-master-100\ roja\ 2.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+ }
+ .teja-master-1000-roja:hover{
+  opacity: 0;
+  cursor: pointer;
+  transition: all 500ms ease;
+  transform: scale(1.1);
+}
+.img-articulo-teja-master-1000-azul{                   /**TEJA MASTER 1000 ACESCO azul**/
+  background-image: url(../accests/teja-master-1000\ azul\ 2.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+ }
+ .teja-master-1000-azul:hover{
+  opacity: 0;
+  cursor: pointer;
+  transition: all 500ms ease;
+  transform: scale(1.1);
+}
+
+.img-articulo-teja-master-1000-galvanizada{                   /**TEJA MASTER 1000 ACESCO galvanizada**/
+  background-image: url(../accests/teja-master\ 1000\ galvanizada\ 2.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+ }
+ .teja-master-1000-galvanizada:hover{
+  opacity: 0;
+  cursor: pointer;
+  transition: all 500ms ease;
+  transform: scale(1.1);
+}
+
+.img-articulo-teja-master-1000-azul{                   /**TEJA MASTER 1000 ACESCO azul**/
+  background-image: url(../accests/teja-master-1000\ azul\ 2.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+ }
+ .teja-master-1000-azul:hover{
+  opacity: 0;
+  cursor: pointer;
+  transition: all 500ms ease;
+  transform: scale(1.1);
+}
+.img-articulo-teja-zinc{                   /**TEJA ZINC**/
+  background-image: url(../accests/teja-zinc\ 2.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+ }
+ .teja-zinc:hover{
+  opacity: 0;
+  cursor: pointer;
+  transition: all 500ms ease;
+  transform: scale(1.1);
+}
+
+.img-articulo-alambre-galvanizado-calibre-18{                   /**alambre galvanizado calibre 18**/
+  background-image: url(../accests/alambre-galvanizado-calibre-18\ 2.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+ }
+ .alambre-galvanizado-calibre-18:hover{
+  opacity: 0;
+  cursor: pointer;
+  transition: all 500ms ease;
+  transform: scale(1.1);
+}
+
+.img-articulo-asiento-sanitario-corona-blanco{                   /**Asiento sanitario corona blanco**/
+  background-image: url(../accests/asiento-sanitario-corona-blanco\ 2.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+ }
+ .asiento-sanitario-corona-blanco:hover{
+  opacity: 0;
+  cursor: pointer;
+  transition: all 500ms ease;
+  transform: scale(1.1);
+}
+.img-articulo-varilla-corrugada-diaco-media-12mm{                   /**varilla-corrugada-diaco-media-12mm**/
+  background-image: url(../accests/varillas-corrugadas-diaco\ 2.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+ }
+ .varilla-corrugada-diaco-media-12mm:hover{
+  opacity: 0;
+  cursor: pointer;
+  transition: all 500ms ease;
+  transform: scale(1.1);
+}
+
+.img-articulo-asiento-sanitario-aquablue-blanco{                   /**asiento sanitario aqua blue blanco**/
+  background-image: url(../accests/asiento-sanitario-AQUABLUE-basic-bone\ .jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+ }
+ .asiento-sanitario-aquablue-blanco:hover{
+  opacity: 0;
+  cursor: pointer;
+  transition: all 500ms ease;
+  transform: scale(1.1);
+}
+              
+ 
+ .bloquelon-estandar-santafe-n4:hover{         /**Bloquelon santafe standar N4**/
+  opacity: 0.8;
+  cursor: pointer;
+  transition: all 500ms ease;
+  transform: scale(1.1);
+}
+               
+
+ .bloquelon-santafe:hover{           /**Bloquelon santafe standar N4**/
+  opacity: 0.8;
+  cursor: pointer;
+  transition: all 500ms ease;
+  transform: scale(1.1);
+}
+
+
+
+
+ /**FIN articulos mas visitados**/
+ 
+ 
+
+
+  /**AGENDA TU CITA**/
+ .btn-reserva-tu-cita{
+  background-color: rgba(0, 0, 0, 0);
+  border: 2px solid wheat;
+  color: white;
+  padding: 25px 50px;
+  font-size: 22px;
+  font-family: 'Comfortaa', cursive;
+}
+ .btn-reserva-tu-cita:hover{
+  background-color: white;
+  border:none;
+  color: black;
+  padding: 25px 50px;
+ }
+ 
+ .img-calendario img{ 
+  background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.2)), url(http://foo.com/image.jpg);
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  width:340px;
+ }
+
+ .container-calendario{
+   padding: 40px;
+ }
+
+ .container-informacion2{
+  display: flex;
+ }
+
+ .container-informacion-agenda-tu-cita{
+   padding: 40px;
+   height: 100%;
+ }
+
+
+ 
+
+
+ /**servicios**/
+
+ 
+ .container-servicios{
+   height: 300px;
+ }
+ @media(max-width: 1024){
+  .elementor-row{
+    flex-wrap: wrap;
+  }
+ }
+ .elementor-row{
+    width: 100%;
+    display: flex;
+    justify-content:center;
+ 
+}
+
+
+  .jet-banner {
+    position: relative;
+    overflow: hidden;
+    float: left;
+    max-width: 100%;
+    width: 100%;
+    height: 300px;
+}
+.jet-banner__content {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  text-align: center;
+}
+.jet-banner__content-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  height: 100%;
+}
+.jet-banner__content-wrap:hover {
+  cursor: pointer;
+  transform: scale(1.5);
+  background-color: rgba(58, 141, 10, 0.5);
+  transition: all 500ms ease;
+}
+.jet-banner__title {
+  padding-top: 50px;
+  order: 1;
+  text-align: center;
+  color: #FFFFFF;
+  font-family: 'Comfortaa', cursive;
+  font-size: 30px;
+  font-weight: 400;
+
+}
+.barbershop, .SPA{
+  height: 100%;
+}
+
+/**galeria*/
+
+.informacion-galeria{
+  display: flex;
+}
+.img-cortes{
+  padding-top: 130px;
+ opacity: 0;
+  width: 100%;
+ 
+}
+.img-cortes:hover{
+  opacity: 0.8;
+ }
+ .jet-banner-servicios {
+  position: relative;
+  overflow: hidden;
+  float: left;
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  margin-bottom:0px ;
+  padding: 6px;
+}
+.jet-banner__content-wrap-servicos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  height: 380px ;
+}
+.jet-banner__content-wrap-servicios:hover {
+  cursor: pointer;
+  transform: scale(1.5);
+  background-color: rgba(142, 192, 5, 0.5);
+  transition: all 500ms ease;
+}
+
+/**footer*/
+
+@media(max-width:990px){
+  .contenedor-img-footer{
+  
+    margin: auto;
+  }
+}

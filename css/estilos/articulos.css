@@ -1,0 +1,844 @@
+
+/*HEADER*/
+
+.header__superior{
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+  
+  }
+  
+  .logo img{
+    width: 160px;
+  
+  }
+  .search input{
+    width: 300px;
+    padding: 10px;
+  }
+  
+  
+  
+  .contenedor-hamburguesa{
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  .container-carrusel{
+    width: 50%;
+    margin: auto;
+  }
+  .carrusel-ancho{
+    width: 300px;
+    margin: auto;
+  }
+  .btn-reserva-slider{
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid wheat;
+    color: white;
+    padding: 15px;
+  }
+  .btn-reserva-slider:hover{
+    background-color: white;
+    border: 1px solid wheat;
+    color: black;
+    padding: 15px;
+    
+  }
+  
+  .li-menu:hover{
+    transition: all 300ms ease;
+    border-top: 1px solid #b77843;
+  
+  }
+  
+  .li-menu a{
+    color: black;
+    font-family: 'Raleway', sans-serif;
+  }
+  .li-menu a:hover{
+    color: #b77843;
+    font-family: 'Raleway', sans-serif;
+  }
+  
+  h1, h3{
+    font-family: 'Raleway', sans-serif;
+  }
+  
+  
+                                /**Buscador*/
+  
+                                .searchbar{
+                                  margin-bottom: auto;
+                                  margin-top: auto;
+                                  height: 60px;
+                                  background-color: #353b48;
+                                  border-radius: 30px;
+                                  padding: 10px;
+                                  }
+                              
+                                  .search_input{
+                                  color: white;
+                                  border: 0;
+                                  outline: 0;
+                                  background: none;
+                                  width: 0;
+                                  caret-color:transparent;
+                                  line-height: 40px;
+                                  transition: width 0.4s linear;
+                                  }
+                              
+                                  .searchbar:hover > .search_input{
+                                  padding: 0 10px;
+                                  width: 450px;
+                                  caret-color:red;
+                                  transition: width 0.4s linear;
+                                  }
+                              
+                                  .searchbar:hover > .search_icon{
+                                  background: white;
+                                  color: #e74c3c;
+                                  }
+                              
+                                  .search_icon{
+                                  height: 40px;
+                                  width: 40px;
+                                  float: right;
+                                  display: flex;
+                                  justify-content: center;
+                                  align-items: center;
+                                  border-radius: 50%;
+                                  color:white;
+                                  text-decoration:none;
+                                  }
+  
+                                /**FIN DE BUSCADOR*/
+  
+  
+  
+  /*fin del HEADER**/
+
+header{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: #fff;
+    box-shadow: 0 4px 25px -22px black;
+    z-index: 10;
+}
+
+.header-content{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.logo{
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo h1 b{
+    color: #46a2fd;
+}
+
+
+.menu {
+    height: 80px;
+    margin-right: 60px;
+}
+
+.menu nav{
+    height: 100%;
+}
+
+.menu nav ul{
+    height: 100%;
+    display: flex;
+    list-style: none;
+}
+
+.menu nav ul li{
+    height: 100%;
+    margin: 0px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.menu-selected:before{
+    content: '';
+    width: 100%;
+    height: 4px;
+    background: #46a2fd;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.menu nav ul li a{
+    color: #777777;
+    font-size: 18px;
+    transition: color 300ms;
+}
+
+.menu nav ul li a:hover{
+    color: #46a2fd;
+}
+
+.menu .text-menu-selected{
+    color: #46a2fd;
+}
+
+
+
+#icon-menu{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 20px;
+    top: 16px;
+    padding: 10px;
+    font-size: 20px;
+    background: #eeeeeefa;
+    border-radius: 100%;
+    color: #787878;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#icon-menu:hover{
+    opacity: 0.8;
+}
+
+
+
+/*Buscador de contenido*/
+
+#ctn-icon-search{
+    position: fixed;
+    right: 20px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+#ctn-icon-search i{
+    font-size: 18px;
+    color: #777777;
+    cursor: pointer;
+    transition: all 300ms;
+    text-decoration: none;
+}
+
+#ctn-icon-search i:hover{
+    color: #46a2fd;
+}
+
+
+#ctn-bars-search{
+    position: relative;
+    top: 130px;
+    width: 100%;
+    background: #fff;
+    padding: 20px;
+    z-index: 9;
+    transition: all 600ms;
+}
+
+#ctn-bars-search input{
+    display: block;
+    width: 1200px;
+    margin: auto;
+    padding: 10px;
+    font-size: 18px;
+    outline: 0;
+}
+
+#box-search{
+    position: relative;
+    top: 140px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1200px;
+    background: #fff;
+    z-index: 8;
+    overflow: hidden;
+    display: none;
+}
+
+#box-search li a{
+    display: block;
+    width: 1200px;
+    color: #777777;
+    padding: 12px 20px;
+    text-decoration: none;
+
+}
+
+#box-search li a:hover{
+    background: #f3f3f3;
+}
+
+#box-search li a i{
+    margin-right: 10px;
+    color: #777777;
+}
+
+
+#cover-ctn-search{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 7;
+    display: none;
+}
+
+/*FIN DE HEADER*/
+
+
+
+/*Portada*/
+
+
+.article-container-cover{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    margin-top: 80px;
+    background-image: url(../img/parallax/cemento\ gris\ cemex\ 50\ kg\ .jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.article-container-cover-piso-ceramica-acuarela-azul-40x40{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    margin-top: 80px;
+    background-image: url(../img/parallax/piso\ ceramica\ acuarela\ azul\ eruceramica.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.article-container-cover-piso-ceramica-acuarela-biege-40x40{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    margin-top: 80px;
+    background-image: url(../img/parallax/piso\ ceramica\ acuarela\ beige\ eruceramica.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.article-container-cover-piso-ceramica-acuarela-blanca-40x40{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    margin-top: 80px;
+    background-image: url(../img/parallax/ceramica-acuerela-blanca3.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.article-container-cover-piso-ceramica-acuarela-negra-40x40{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    margin-top: 80px;
+    background-image: url(../img/articulos/ceramica-acuerela-negra3.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.article-container-cover-piso-ceramica-antique-blanca-45x45{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    margin-top: 80px;
+    background-image: url(../img/articulos/piso-antique-blanco2-45x45.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.article-container-cover-piso-ceramica-aqua-azul-40x40{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    margin-top: 80px;
+    background-image: url(../img/articulos/ceramica-aqua-azul.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.article-container-cover-piso-ceramica-aqua-azul-30x30{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    margin-top: 80px;
+    background-image: url(../img/articulos/ceramica-aqua-azul-30x302\ -\ recorte.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.article-container-cover-piso-ceramica-aqua-blanca-30x30{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    margin-top: 80px;
+    background-image: url(../img/articulos/piso-ceramica-aqua-blanca-30x30\ 2.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.article-container-cover-piso-ceramica-aqua-taupe-30x30{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    margin-top: 80px;
+    background-image: url(../img/articulos/piso-ceramica-aqua-taupe-30x30.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.article-container-cover-piso-ceramica-ARABELLAMIX-60x60{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    margin-top: 80px;
+    background-image: url(../img/articulos/ceramica-arabellamix3.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.article-container-cover-piso-ceramica-bakura-gris{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    margin-top: 80px;
+    background-image: url(../img/articulos/piso-ceramica-bakura-gris3.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.article-container-cover-piso-ceramica-Bardiglio-Beige{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    margin-top: 80px;
+    background-image: url(../img/articulos/piso-bardiglio-beige3.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.article-container-cover-piso-ceramica-barranquilla-blanco{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    margin-top: 80px;
+    background-image: url(../img/articulos/BARRANQUILLA-BLANCO-50X50\ 3.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.article-container-cover-piso-ceramica-barranquilla-negro{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    margin-top: 80px;
+    background-image: url(../img/articulos/BARRANQUILLA-NEGRO-50X50\ 3.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.article-container-cover-piso-ceramica-belgio-crema{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    margin-top: 80px;
+    background-image: url(../img/articulos/Piso-belgio-crema3.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.article-container-cover-piso-ceramica-benares-gris{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    margin-top: 80px;
+    background-image: url(../img/articulos/Euroceramica-BENARES-60X60.3\ -doble.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.article-container-cover-piso-ceramica-benedeto-multicolor{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    margin-top: 80px;
+    background-image: url(../img/articulos/EUROCERAMICA-BENEDETO-60X60-3.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.article-container-cover-piso-ceramica-bernal-gris{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    margin-top: 80px;
+    background-image: url(../img/articulos/BERNAL-GRIS-50X50-3\ -\ copia.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.article-container-cover-piso-ceramica-bilbao-azul{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    margin-top: 80px;
+    background-image: url(../img/articulos/BILBAO-AZUL-40X40-3.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.article-container-cover-piso-ceramica-bilbao-beige{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    margin-top: 80px;
+    background-image: url(../img/articulos/BILBAO-BEIGE-3.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.article-container-cover-piso-ceramica-bilbao-mix{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    margin-top: 80px;
+    background-image: url(../img/articulos/BILBAO-MIX-40X40-3.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.article-container-cover-piso-ceramica-bilbao-blanco{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    margin-top: 80px;
+    background-image: url(../img/articulos/BILBAO-BLANCO-40X40-3.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.article-container-cover-piso-ceramica-bombay-blanco{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    margin-top: 80px;
+    background-image: url(../img/articulos/BOMBAY\ BLANCO-45.8X45.8\ -2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.article-container-cover-piso-ceramica-bonanza-crema{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    margin-top: 80px;
+    background-image: url(../img/articulos/bonanza-crema-2.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.article-container-cover-piso-ceramica-boticcino-blanco{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    margin-top: 80px;
+    background-image: url(../img/articulos/boticcino\ blanco\ 61x61-3.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.article-container-cover-piso-ceramica-buenos-aires-blanco{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    margin-top: 80px;
+    background-image: url(../img/articulos/buenos-aires-beige-2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.article-container-cover-piso-ceramica-cabrera{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    margin-top: 80px;
+    background-image: url(../img/articulos/cabrera3.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.article-container-cover-piso-ceramica-castano-multicolor{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    margin-top: 80px;
+    background-image: url(../img/articulos/piso.castano-multicolor-3.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.article-container-cover-piso-ceramica-ceniza-gray{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    margin-top: 80px;
+    background-image: url(../img/articulos/ceniza\ grey5.jpg.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.article-container-cover-piso-ceramica-century-gris{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    margin-top: 80px;
+    background-image: url(../img/articulos/CENTURY-3.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.article-container-cover-piso-ceramica-cratos-beige{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    margin-top: 80px;
+    background-image: url(../img/articulos/cratos\ beige3.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.article-container-cover-piso-ceramica-creta-beige{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    margin-top: 80px;
+    background-image: url(../img/articulos/creta\ beige\ 3.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.article-container-cover-piso-ceramica-maki-blanco{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    margin-top: 80px;
+    background-image: url(../img/articulos/maki\ blanco\ 3.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.article-container-cover-piso-ceramica-maki-beige{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    margin-top: 80px;
+    background-image: url(../img/articulos/maki\ beige3.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.article-container-cover:before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    /*background: rgba(38, 172, 255, 0.6);*/
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.container-info-cover{ /**pagina principal**/
+    max-width: 800px;
+    height: 700px;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+
+.h1-container-info-cover h1{
+    font-size: 2px;
+    font-weight: 500;
+    color: black;
+    margin-bottom: 7px;
+}
+
+.container-info-cover p{
+    color: #ca1b1b;
+    font-size: 5px;
+    font-weight: 300;
+}
+
+/*Contenedor - contenido del articulo*/
+.boton-descargar-pdf{
+    transition: all 200ms ease-out;
+}
+.boton-descargar-pdf:hover{
+   opacity: 0.6;
+    transform: scale(1.1);
+
+}
+
+.container-content{
+    width: 1200px;
+    margin: auto;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+article{
+    width: 100%;
+    padding: 20px;
+    padding-bottom: 40px;
+    box-shadow: -10px 0 20px -30px black;
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;    
+    background: #fff;
+}
+
+article:before{
+    content: '';
+    width: 100%;
+    height: 6px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #46a2fd;
+}
+
+article h1{
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 40px;
+}
+
+article p{
+    margin-top: 20px;
+    font-size: 18px;
+    color: #3c3c3c;
+}
+
+article img{
+    width: 100%;
+    margin-top: 20px;
+}
+
+/*Aside de los articulos de relacionados*/
+
+.container-aside aside{
+  width: 320px;
+  border-right: 6px;
+  box-shadow: 0 0 20px -20px black;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-left: 40px;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  background: #fff;
+}
+
+.container-aside aside img{
+    width: 100%;
+}
+
+.container-aside aside h2,
+.container-aside aside p{
+    margin-top: 20px;
+    padding: 0px 20px;
+}
+
+.container-aside aside button{
+    margin-top: 20px;
+    margin-left: 20px;
+    padding: 10px 50px;
+    font-size: 16px;
+    background: #46a2fd;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.container-aside aside button:hover{
+    opacity: 0.9;
+}
+
+@media screen and (max-width: 1220px){
+
+    .container-content{
+        max-width: 1000px;
+        padding: 0 20px;
+    }
+
+
+}
+
+@media screen and (max-width: 1020px){
+
+    .container-content{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    article{
+        box-shadow: 0 0 0 0;
+    }
+
+    .container-aside{
+        display: flex;
+        justify-content: center;
+    }
+
+    .container-aside aside{
+        max-width: 300px;
+        margin: 10px;
+    }
+
+}
+
+@media screen and (max-width: 800px){
+
+    .container-aside{
+        flex-wrap: wrap;
+    }
+
+    #icon-menu{
+        right: 20px;
+    }
+
+}
