@@ -39,15 +39,14 @@ body {
 /*===================SECCION NUESTRO EQUIPO MAPA==========================*/
 #local {
     margin-top:50px;
-    background-color: #f3f3f3;
+   
     display:flex;
+    flex-direction: column;
     justify-content: center; 
     padding-bottom: 300px; 
 }
 
-.mapa {
-    height:500px;
-}
+
 
 
 .wrapper-local {
@@ -324,3 +323,6 @@ footer p{
         grid-template-columns: repeat(1, 1fr);
     }
 }
+
+
+/**MAPA **/
