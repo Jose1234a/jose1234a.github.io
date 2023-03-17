@@ -1,9 +1,10 @@
 /*===============Propiedades Globales================*/
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
 }
 
@@ -12,14 +13,22 @@ body {
 
  #menu a, button{
      font-size: 18px !important;
-     font-weight: 600;
-    
+     
+     font-family: 'Poppins', sans-serif;
  }
 
  #menu a{
      color:white;
      
  }
+
+ .titulo-promocion{
+    margin-top: 22px;
+   
+    margin-left: 22px;
+    color: rgb(199, 6, 6);
+    font-weight: 800;
+}
 /*===================SLIDER DE IMAGENES==========================*/
 
 .carousel-inner {
@@ -125,6 +134,29 @@ footer p{
     padding: 0 8px;
     color:#f3f3f3;
 }
+
+.boton-subir img{
+    width: 50px;
+    height: 50px;
+    position: relative;
+}
+.boton-subir{
+ 
+  float: right;
+  margin-right: 20px;
+  transition: all 300ms ease;
+}
+
+.boton-subir-contenedor{
+    z-index: 10;
+    top: 30em;
+    right: 0;
+    bottom: 3em;
+    left: 0;
+    position: fixed;
+   
+}
+
 
 /*=========================MEDIA QUERIES PANTALLA ANCHA================================*/
 
