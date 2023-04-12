@@ -24,28 +24,55 @@
   <!--========================================================== -->
                         <!-- ENCABEZADO -->
   <!--========================================================== -->
-    <header class="container-fluid  d-flex justify-content-center" id="boton-subir">
-      <a href="index.html"><img class="mb-0 p-2 fs-6" src="img/logodeposito.png" style="width: 120px;" alt=""></a>
+    <header class="container-fluid  d-flex justify-content-center bg-primary text-center" style="height: 50px;" id="boton-subir">
+     <!--Carrusel-->
+     <div id="carouselExampleCaptions" class="carousel slide cabeza text-center" data-bs-ride="carousel">
+      <div class="carousel-indicators" style="opacity: 0;">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner ">
+        <div class="carousel-item active bloque-imagen">
+          <span>Los productos estan categorizados por bodegas</span>
+        </div>
+        <div class="carousel-item bloque-imagen">
+          <span>Cada producto tiene el codigo del sistema</span>
+        </div>
+        <div class="carousel-item bloque-imagen" >
+          <span>Cualquier cambio en la pagina, envie al correo</span>
+        </div>
+      </div>
+      <button class="carousel-control-prev" style="opacity: 0;"  type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" style="opacity: 0;" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+     <!--fin de carrusel-->
     </header> 
 
-    <nav  class="navbar navbar-expand-lg navbar-light p-3 bg-primary"  id="menu">
+    <nav  class="navbar navbar-expand-lg navbar-light p-3 bg-white"  id="menu">
         <div class="container">
-          <a class="navbar-brand" href="index.html">
-              <span class="fs-5  fw-bold">INICIO</span>
+          <a class="navbar-brand " href="index.html">
+            <a href="index.html"><img class="mb-0 p-2 fs-6 img-nav " src="img/logodeposito.png" style="width: 120px;" alt=""></a>
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
 
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="collapse navbar-collapse" style="margin-left: 60px;" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
+              <li class="nav-item menu-a">
                 <a class="nav-link" aria-current="page" href="#equipo">Productos </a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item menu-a">
                 <a class="nav-link" href="#seccion-contacto">Preguntas</a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item menu-a">
                 <a class="nav-link" href="promociones.html">Promociones</a>
               </li>
   
@@ -157,6 +184,7 @@
           <label for="VUE">Cerámica</label>
           
       </div>
+  
 
       <div class="posts">
 
@@ -828,7 +856,7 @@
 
 </section>
 
-
+</div>
 <!--========================================================== -->
                         <!-- SECCION CONTACTOS-->
 <!--========================================================== -->
