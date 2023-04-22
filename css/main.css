@@ -12,29 +12,27 @@ body {
 /*===================MENU==========================*/
 
  #menu a, button{
-     font-size: 18px !important; 
+     font-size: 16px !important; 
      font-family: 'Poppins', sans-serif;
-     color:rgb(77, 77, 77);  
+     color: white;  
    
  }
 
  .menu-a{
      border-bottom: 3px rgba(0, 0, 0, 0) solid;  
-     border-top: 1px rgba(0, 0, 0, 0) solid;  
-     font-weight: 600;
-     color: rgb(70, 70, 70);
+     font-weight: 330;
+     color: white;
  }
  .menu-a:hover{
-    color: rgb(39, 39, 39);  
-    opacity: 0.7;
-    border-top: 1px wheat solid;  
+    color: rgb(250, 192, 0); 
     border-bottom: 3px wheat solid;
     transition: all 300ms ease-in;
 }
 
 .img-nav:hover{
-    transform: scale(1.1);
+    transform: scale(1.1) ;
     transition: all 300ms;
+
 }
 
  .titulo-promocion{
@@ -46,20 +44,77 @@ body {
 }
 .bloque-imagen{
     width: 100px;
-    height: 90px;
+    height: 23px;
     margin-top: 8px;
     color: white;
 }
 .cabeza{
     max-width:605px;
 }
+.inicio-casa{
+    width: 40px;
+    height: 40px;
+    background-image: url("../img/inicio.png");
+    background-repeat: no-repeat;
+    background-size: 0;
+  
+}
+.inicio-casa img{
+    width: 100%;
+   height: 100%;
+   margin: auto
+ }
+.inicio-casa img:hover{
+   opacity: 0;
+   transition: all 200ms ease;
+  
+}
+.inicio-casa:hover{
+    background-image: url("../img/inicio2.png");
+    background-repeat: no-repeat;
+    background-size: 60% 60%;
+    background-position: center;
+    margin: auto;
+    opacity: 1;
+}
 
+@media (max-width:992px){
+    .inicio-casa img:hover{
+        opacity: 1;
+     }
+     .inicio-casa img{
+        width: 100%;
+       height: 100%;
+    
+     }
+     .inicio-casa{
+        width: 40px;
+        height: 40px;
+        background-image: url("../img/inicio.png");
+        background-repeat: no-repeat;
+        background-size: 100%;
+      opacity: 0;
+    }
+     .inicio-casa:hover{
+        background-image: url("../img/inicio2.png");
+        background-repeat: no-repeat;
+        background-size: 60% 60%;
+        background-position: center;
+        margin: auto;
+        opacity: 0;
+    }
+}
 /*===================SLIDER DE IMAGENES==========================*/
 
 .carousel-inner {
     max-height:39rem !important;
 }
 
+/*===================SECCION PRODUCTOS==========================*/
+.h1-metro{
+    font-size: 22px;
+}
+/*===================FIN DE SECCION PRODUCTOS==========================*/
 /*===================SECCION NUESTRO EQUIPO IMAGEN==========================*/
 
 
@@ -140,8 +195,24 @@ body {
 #titulo-formulario {
     color: #3f3f3f;
 }
+.dos-bloques{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.formulario-uno{
 
+    width: 112%;
 
+}
+.formulario-dos{
+    width: 120%;
+}
+.formulario-dos img{
+    width: 173px;
+    margin-top: auto;
+    margin-left: auto;
+    margin-left: 18px;
+}
 
 
 /*=========================FOOTER================================*/
