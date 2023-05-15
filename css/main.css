@@ -61,16 +61,21 @@ body {
 .pop-up-title{
     flex-basis: 0;
     flex-grow:1.5;
-    height: 460px;
+    height: 400px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
-    background-image: url('../img/fachada\ portada.png');
     background-size: 165%;
     background-position: center;
     background-repeat: no-repeat;
+  
+}
+.pop-up-title img{
+
+  
+ 
 }
 
 .pop-up-title::after{
@@ -136,6 +141,14 @@ body {
     text-align: center;
 }
 
+.img-fredy{
+    bottom: 0;
+    position: absolute;
+    padding: 30px;
+    padding-bottom: 0px;
+
+   
+}
 .sub-content{
     width: 75%;
 }
@@ -403,19 +416,18 @@ body {
     color: #3f3f3f;
 }
 .dos-bloques{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }
 .formulario-uno{
-
-    width: 112%;
-
+    text-align: center;
+    margin: auto;
+    justify-content: center;
 }
-.formulario-dos{
-    width: 120%;
-}
+
 .formulario-dos img{
-    width: 173px;
+    width: 100px;
     margin-top: auto;
     margin-left: auto;
     margin-left: 18px;
@@ -729,5 +741,38 @@ footer p{
 }
 
 
-/**MAPA **/
+/**boton cotiza 
+    .boton-cotiza{
+        background-color: #0063a5;
+        width: 150px;
+        color: white;
+        height: 50px;
+        border: 1px solid rgba(0, 0, 0, 0);
+        border-radius: 12px;
+        margin-bottom: 108px;
+        
+    }
+    .boton-cotiza h5{
+      margin: auto;
+      text-decoration: none;
+    }
+    .boton-cotiza:hover{
+        background-color: #ffffff;
+        color:#0063a5;
+        width: 150px;
+        height: 50px;
+        border: 1px solid #0063a5;
+        
+    }**/
+    
+      .Deposito-text{
+        width: 50%;
+        margin: auto;
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+    .seccion-cotiza{
+        margin-bottom: 122px;
+    }
+
     
