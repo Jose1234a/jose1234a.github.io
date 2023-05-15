@@ -654,7 +654,10 @@ footer p{
     margin-top: 20px;
     padding: 0px 20px;
 }
-
+.post h1{
+    font-size: 32px !important; 
+    font-family: 'Poppins', sans-serif;
+}
 .post span{
     display: block;
     margin-top: 10px;
@@ -741,38 +744,87 @@ footer p{
 }
 
 
-/**boton cotiza 
-    .boton-cotiza{
-        background-color: #0063a5;
-        width: 150px;
-        color: white;
-        height: 50px;
-        border: 1px solid rgba(0, 0, 0, 0);
-        border-radius: 12px;
-        margin-bottom: 108px;
-        
-    }
-    .boton-cotiza h5{
-      margin: auto;
-      text-decoration: none;
-    }
-    .boton-cotiza:hover{
-        background-color: #ffffff;
-        color:#0063a5;
-        width: 150px;
-        height: 50px;
-        border: 1px solid #0063a5;
-        
-    }**/
+
     
       .Deposito-text{
-        width: 50%;
+        width: 200px;
         margin: auto;
         margin-top: 30px;
         margin-bottom: 30px;
       }
+
+      .h1-cotiza{
+        font-size: 20px;
+        width: 80%;
+        margin: auto;
+      }
+    
+
+
+
+
+
+
+
     .seccion-cotiza{
         margin-bottom: 122px;
+        display: flex;
+    }
+    .container1-cotiza{
+        width: 50%;
+    }
+    .btn-cotiza{
+        margin-top: 22px;
+        text-decoration: none;
+        background-color: #0063a5;
+        color: #ffffff;
+        width: 220px;
+        height: 70px;
+        z-index: 10;
+        border-radius: 15px;
+        border: 2px solid rgba(0, 0, 0, 0);
+        margin-bottom:55px;  
+    }
+    .h1-cotiza-ya{
+        font-size: 26px;
+    }
+    .btn-cotiza:hover{
+        background-color: #ffffff;
+        color: #0063a5;
+        border: 2px solid #0063a5;
+ 
     }
 
-    
+
+
+
+
+    @media screen and (max-width: 1218px){
+        .h1-cotiza-ya{
+            width: 200px;
+            font-size: 22px;
+        }
+        .btn-cotiza-ya{
+            width: 180px;
+            height:50px;
+            margin-bottom:55px;  
+        }
+        .btn-cotiza-ya:hover{
+            background-color: #ffffff;
+            color: #0063a5;
+            border: 2px solid #0063a5;
+     
+        }
+        .seccion-cotiza{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    @media screen and (max-width: 608px){
+        .h1-cotiza{
+            font-size: 15px;
+            width: 100%;
+          }
+        
+    }
