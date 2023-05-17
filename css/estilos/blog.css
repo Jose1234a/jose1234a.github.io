@@ -132,7 +132,7 @@ input[type="radio"]{
 
 .post h2{
     font-size: 15px;
-    margin-top: 20px;
+ 
     padding: 0px 20px;
     text-transform: capitalize;
 }
@@ -143,22 +143,7 @@ input[type="radio"]{
     padding: 0px 20px;
 }
 
-.ctn-tag{
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: 16px;
-    margin-top: 10px;
-}
 
-.ctn-tag li{
-    list-style: none;
-    font-size: 14px;
-    margin: 4px;
-    padding: 6px 10px;
-    background: #e8e8e8;
-    cursor: default;
-}
 
 
 .post button{

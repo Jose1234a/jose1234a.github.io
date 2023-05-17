@@ -322,7 +322,7 @@ body {
         margin: auto;
         opacity: 0;
     }
-}
+}flex
 /*===================SLIDER DE IMAGENES==========================*/
 
 .carousel-inner {
@@ -330,8 +330,25 @@ body {
 }
 
 /*===================SECCION PRODUCTOS==========================*/
-.h1-metro{
-    font-size: 22px;
+
+
+.contenedor-caja{
+    display: flex;
+    text-align: left;
+}
+
+.span-metro{
+    background-color: #eeeeee;
+    color: black;
+    width: 80px;
+    border-bottom-right-radius: 12px;
+}
+.span-caja{
+    background-color: #eeeeee;
+    color: black;
+   text-align: center;
+    border-bottom-right-radius: 12px;
+    font-size: 14px;
 }
 /*===================FIN DE SECCION PRODUCTOS==========================*/
 
@@ -626,7 +643,7 @@ footer p{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 20px;
-
+    height: 80%;
     margin-top: 20px;
     padding: 20px;
 }
@@ -651,7 +668,7 @@ footer p{
 
 .post h2{
     font-size: 18px;
-    margin-top: 20px;
+    margin-top: 0px;
     padding: 0px 20px;
 }
 .post h1{
@@ -668,17 +685,19 @@ footer p{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    margin-left: 16px;
-    margin-top: 10px;
+    padding: 0px;
+    padding-left: 16px;
+  
 }
 
 .ctn-tag li{
     list-style: none;
     font-size: 14px;
-    margin: 4px;
-    padding: 6px 10px;
-    background: #e8e8e8;
+ 
+  
+   
     cursor: default;
+    width: 100%;
 }
 
 
