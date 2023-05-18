@@ -648,13 +648,6 @@ footer p{
     padding: 20px;
 }
 
-.posts .post{
-    background: #fff;
-    box-shadow: 0 0 20px -20px black;
-    border-radius: 6px;
-    overflow: hidden;
-    padding-bottom: 20px;
-}
 
 .post .ctn-img{
     width: 100%;
@@ -679,6 +672,7 @@ footer p{
     display: block;
     margin-top: 10px;
     padding: 0px 20px;
+    font-size: 12px;
 }
 
 .ctn-tag{
@@ -693,11 +687,10 @@ footer p{
 .ctn-tag li{
     list-style: none;
     font-size: 14px;
- 
-  
-   
     cursor: default;
     width: 100%;
+    font-size: 14px;
+    opacity: 0.7;
 }
 
 

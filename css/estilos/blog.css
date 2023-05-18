@@ -97,14 +97,14 @@ input[type="radio"]{
 
 .posts .post{
     background: #fff;
-    box-shadow: 0 0 15px -10px black;
+    box-shadow: 0 0 10px -9px black;
     border-radius: 14px;
     overflow: hidden;
     padding-bottom: 20px;
 }
 .posts .post:hover{
     background:rgb(249, 248, 247);
-    box-shadow: 0 0 15px -10px black;
+    box-shadow: 0 0 11px -10px black;
     border-radius: 14px;
     overflow: hidden;
     padding-bottom: 20px;
