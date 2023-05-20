@@ -7,6 +7,7 @@ body {
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
     text-align: center;
+   
 }
 /* MODAL***/
 
@@ -349,6 +350,27 @@ body {
    text-align: center;
     border-bottom-right-radius: 12px;
     font-size: 14px;
+}
+
+.contenedor-usos{
+    z-index: 1;
+    position: absolute;
+    margin: 25px;
+    display: flex;
+
+}
+.contenedor-usos div img{
+   width: 40px;
+  margin-left: 18px;
+  margin-top: 10px;
+}
+.contenedor-usos div img:hover{
+    width: 42px;
+  transition: all 100ms ease;
+ }
+
+.btn-usos{
+    background-color: #0063a5;
 }
 /*===================FIN DE SECCION PRODUCTOS==========================*/
 
