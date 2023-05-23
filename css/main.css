@@ -360,13 +360,13 @@ body {
 
 }
 .contenedor-usos div img{
-   width: 40px;
-  margin-left: 18px;
+   width: 30px;
+  margin-left: 15px;
   margin-top: 10px;
 }
 .contenedor-usos div img:hover{
-    width: 42px;
-  transition: all 100ms ease;
+    width: 40px;
+    transition: all 100ms ease;
  }
 
 .btn-usos{
