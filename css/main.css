@@ -264,13 +264,12 @@ body {
 }
 .bloque-imagen{
     width: 100px;
-    height: 23px;
-    margin-top: 8px;
+    height: 18px;
+    margin-top: px;
     color: white;
+    font-size: 12px;
 }
-.cabeza{
-    max-width:605px;
-}
+
 .inicio-casa{
     width: 40px;
     height: 40px;
@@ -371,6 +370,24 @@ body {
 
 .btn-usos{
     background-color: #0063a5;
+}
+
+@media (max-width:1200px){
+    #intro, #equipo {
+        width:90% !important;
+        margin:auto;
+    }
+  
+    #local {
+        flex-wrap: wrap;
+        padding-top:30px;
+   }
+   .wrapper-local {
+    width:90%;
+    margin:auto;
+    padding-top:50px;    
+   }
+ 
 }
 /*===================FIN DE SECCION PRODUCTOS==========================*/
 
