@@ -122,38 +122,6 @@
 /*fin del HEADER**/
 
 
-.parallax {
-    /* The image used */
-    background-image: url(../accests/Fachada\ deposito\ trujillo.jpg);
-  
-    /* Full height */
-    height: 500px;
-  
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-  }
-  .boton-quienes-somos{
-    border: 2px solid#b77843;
-    background-color: rgba(0, 0, 0, 0);
-    padding: 20px;
-    color: #b77843;
-    font-size: 19px;
-    font-family: 'Comfortaa', cursive;
-  
-  }
-  .boton-quienes-somos:hover { 
-    border: 2px solid#b77843;
-    background-color: #b77843;
-    color: white;
-    animation-duration: 3s;
-    animation-name: slidein;
-    animation-iteration-count: infinite;
-
-  }
 
  /**articulos mas visitados**/
 
@@ -337,45 +305,6 @@
  
  
 
-
-  /**AGENDA TU CITA**/
- .btn-reserva-tu-cita{
-  background-color: rgba(0, 0, 0, 0);
-  border: 2px solid wheat;
-  color: white;
-  padding: 25px 50px;
-  font-size: 22px;
-  font-family: 'Comfortaa', cursive;
-}
- .btn-reserva-tu-cita:hover{
-  background-color: white;
-  border:none;
-  color: black;
-  padding: 25px 50px;
- }
- 
- .img-calendario img{ 
-  background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.2)), url(http://foo.com/image.jpg);
-  border-top-right-radius: 50px;
-  border-bottom-right-radius: 50px;
-  width:340px;
- }
-
- .container-calendario{
-   padding: 40px;
- }
-
- .container-informacion2{
-  display: flex;
- }
-
- .container-informacion-agenda-tu-cita{
-   padding: 40px;
-   height: 100%;
- }
-
-
- 
 
 
  /**servicios**/
