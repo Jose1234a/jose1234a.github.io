@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
+  
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+
+<body onload="init()">
+ 
+<!--SECCION NAV-->
+
+ 
+    <!--SECCION NAV-->
+   <header>
+    <section class="container-fluid" style="background-color: #265293;"> <!--INICIA SECCION ARTICULOS DE CONTACTO-->
+
+      <div class="container-md contenedor-slider" >
+          <div style="height: 50%; margin: auto;">
+            <span>Venta telefónica <span style="color: rgb(217, 255, 0);">6088712144 EXT. 131</span> </span>
+          </div>
+          <div style="height: 50%; margin: auto;">
+            <span>Número de Whatsapp <span style="color: rgb(217, 255, 0);">316 8688799</span> </span>
+          </div>
+          <div style="height: 50%; margin: auto;">
+            <span>lo mejor, al mejor precio </span>
+          </div>
+          <div style="height: 50%; margin: auto;">
+            <span>Calle 4 # 2-20 Centro de Neiva</span>
+          </div>
+        
+      </div><!--fin de slider-->
+
+    </section>                                                                <!--FIN DE SECCION DE ARTICULOS DE CONTACTO-->
+    
+
+    <section class="container-fluid seccion-header">
+      <div class="contenedor-de-todo">
+              <button class="btn boton-menu" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
+              aria-controls="offcanvasExample">
+                        <img src="img/menu.png" width="25px" alt="">
+              </button>
+  
+              <div class="offcanvas offcanvas-start bg-dark text-white" tabindex="-1" id="offcanvasExample"
+                          aria-labelledby="offcanvasExampleLabel">
+                          <div class="offcanvas-header">
+                            <h5 class="offcanvas-title text-white" id="offcanvasExampleLabel">Menú</h5>
+                            <button type="button" class="btn-close text-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                          </div>
+                          <div class="offcanvas-body">
+                            <ul class="navbar-nav">
+                              <li class="nav-item">
+                                <a class="nav-link" href="#">Inicio</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="#">Acerca de</a>
+                              </li>
+                              <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                                  aria-expanded="false">
+                                  Servicios
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                  <li><a class="dropdown-item" href="#">Servicio 1</a></li>
+                                  <li><a class="dropdown-item" href="#">Servicio 2</a></li>
+                                  <li><a class="dropdown-item" href="#">Servicio 3</a></li>
+                                </ul>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="#">Contacto</a>
+                              </li>
+                            </ul>
+                          </div>
+              </div>
+
+
+              <div>
+                <div class="contenedor-logo" style="margin: auto;">
+                  <a href=""><img src="img/LOGO-02 - copia.png" width="150px" alt=""></a>
+                </div>
+              </div>
+              
+
+              </div>
+    <!--SECCION buscador-->
+              <div class="search-container">
+                    <input id="searchInput" class="search-input" type="text" placeholder=" ¿ Que estas buscando ?">
+                    <ul id="searchResults"></ul>
+                    <div id="errorMessage" class="error-message"></div>
+               </div>
+        
+    <!--fin de SECCION buscador-->
+              </div>
+             
+    </section>
+    <section class="container-fluid seccion-contenedor-slider-2" > <!--INICIA SECCION ARTICULOS DE CONTACTO-->
+
+      <div class="container-md contenedor-slider-2" >
+          <div class="contenedor-enlaces">
+            <div class="contenedor-sub-enlaces">
+              <a  href="index.html"><button class="boton-sub-enlaces-inicio"><img src="img/inicio.png" width="20px" style="margin-right: 8px;" alt="">Inicio</button></a>
+            </div>
+            <div class="contenedor-sub-enlaces">
+              <a  href=""><button class="boton-sub-enlaces"><img src="img/ferreteria2.png" width="20px" style="margin-right: 8px;" alt="">ferreteria</button></a>
+            </div>
+            <div class="contenedor-sub-enlaces">
+              <a  href="index.html"><button class="boton-sub-enlaces"><img src="img/ceramica2.png" width="20px" style="margin-right: 8px;" alt="">Cerámica</button></a>
+            </div>
+          </div>
+         <!--2-->
+            <div class="contenedor-enlaces-2" style="height: 50%; margin: auto;">
+              <div style="height: 50%; margin: auto;">
+                 <a href="">Precios bajos</a>
+              </div>
+              <div style="height: 50%; margin: auto;">
+                 <a href="">Compra y recoge</a>
+              </div>
+              <div style="height: 50%; margin: auto;">
+                <a href="">Catálogo</a>
+             </div>
+            </div>
+          
+      </div><!--fin de slider-->
+
+    </section>                                                                <!--FIN DE SECCION DE ARTICULOS DE CONTACTO-->
+    
+   </header>
+  <!--FIN DE SECCION NAV-->
+
+
+
+
+
+ <!--SECCION DE MENU Y LOGO-->
+
+ <section class="seccion-inicio-promocion">
+    <div class="contenedor-principal-inicio container-fluid">
+        <div class="contenedor-promocion container-fluid">
+
+            <div class="container-1-promocion">
+              <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <a href="#"><img src="img/promocion-contenedor-1-2.png" class="d-block w-100" alt="..."></a>
+                  </div>
+                  <div class="carousel-item">
+                    <a href="#"><img src="img/promocion-contenedor-1.png" class="d-block w-100" alt="..."></a>
+                  </div>
+                  <div class="carousel-item">
+                   <a href="#"><img src="img/promocion-contenedor-1.png" class="d-block w-100" alt="..."></a> 
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button"  data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" style="background-color: rgba(51, 51, 51, 0.5 ); border-radius: 22px; padding: 20px;" aria-hidden="true"></span>
+                  <span class="visually-hidden" >Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                  <span class="carousel-control-next-icon"  style="background-color: rgba(51, 51, 51, 0.5 ); border-radius: 22px; padding: 20px;" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div> 
+
+            <div class="container-2-promocion">
+              <a href="#"><img src="img/promocion1.png" alt=""></a>
+            </div>
+        </div>
+    </div>
+
+ </section>
+<!--FIN DE SECCION DE MENU Y LOGO-->
+
+<!--SECCION GIF-->
+<div class="container-fluid">
+  <div class="container-gif">
+    <img src="img/Secuencia 01.gif" alt="">
+  </div>
+
+</div>
+<!--SECCION GIF-->
+
+<!--SECCION PRODUCTOS-->
+          <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
+      <div class="row justify-content-center">
+        <div class="col-xl-7 col-lg-9 text-center">
+          <h1>Explora todos nuestros productos</h1>
+          <h2>Referencias seleccionadas</h2>
+        </div>
+      </div>
+  
+      <div class="row icon-boxes">
+
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="200"><!---MEZCL LVP GRC 8" PRISTINA RF:01-2828-11-->
+          <div class="icon-box">
+            <div class="contenedor-img img-fluid"><img src="img/almacen/01-2828-11.jpg" width="50px" alt=""></div>
+            <h4 class="title"><a href="">MEZCL LVP GRC 8" PRISTINA RF:01-2828-11</a></h4>
+                 <span style="font-size: 10px;">GRICOL  </span>
+                 <h4 class="title-precio"> $12.900 <span style="font-size: 9px;">x unidad</span></h4>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="200"><!---MEZCL LVP GRC 8" PRISTINA RF:01-2828-11-->
+          <div class="icon-box">
+            <div class="contenedor-img img-fluid"><img src="img/almacen/01-2828-11.jpg" width="50px" alt=""></div>
+            <h4 class="title"><a href="">MEZCL LVP GRC 8" PRISTINA RF:01-2828-11</a></h4>
+                 <span style="font-size: 10px;">GRICOL  </span>
+                 <h4 class="title-precio"> $12.900 <span style="font-size: 9px;">x unidad</span></h4>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="200"><!---MEZCL LVP GRC 8" PRISTINA RF:01-2828-11-->
+          <div class="icon-box">
+            <div class="contenedor-img img-fluid"><img src="img/almacen/01-2828-11.jpg" width="50px" alt=""></div>
+            <h4 class="title"><a href="">MEZCL LVP GRC 8" PRISTINA RF:01-2828-11</a></h4>
+                 <span style="font-size: 10px;">GRICOL  </span>
+                 <h4 class="title-precio"> $12.900 <span style="font-size: 9px;">x unidad</span></h4>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="200"><!---MEZCL LVP GRC 8" PRISTINA RF:01-2828-11-->
+          <div class="icon-box">
+            <div class="contenedor-img img-fluid"><img src="img/almacen/01-2828-11.jpg" width="50px" alt=""></div>
+            <h4 class="title"><a href="">MEZCL LVP GRC 8" PRISTINA RF:01-2828-11</a></h4>
+                 <span style="font-size: 10px;">GRICOL  </span>
+                 <h4 class="title-precio"> $12.900 <span style="font-size: 9px;">x unidad</span></h4>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section><!-- End Hero -->
+iv>
+            </div>
+<!--FIN DE SECCION PRODUCTOS-->
+  
+      
+        <script src="js/index.js"></script>
+        
+        <script src="js/bootstrap.min.js"></script>
+        <script src="https://kit.fontawesome.com/xxxxxxxxxx.js" crossorigin="anonymous"></script>
+     
+           
+</body>
+</html>
+
+
