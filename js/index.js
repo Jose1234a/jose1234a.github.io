@@ -1,99 +1,134 @@
-const database = [
-  { title: 'Resultado 1', url: 'https://www.example.com/result1' },
-  { title: 'Resultado 2', url: '' },
-  { title: 'Resultado 3', url: 'https://www.example.com/result3' }
-]; // Ejemplo de base de datos con título y URL
+var datos = [
+  {
+    title: "llaves para lavaplatos",
+    url: "https://www.example.com/page1"
+  },
+  {
+    title: "Cemento",
+    url: "https://www.example.com/page2"
+  },
+  {
+    title: "Sanitarios",
+    url: "https://www.example.com/page3"
+  },
 
-const searchInput = document.getElementById('searchInput');
-const searchResults = document.getElementById('searchResults');
-const errorMessage = document.getElementById('errorMessage');
-let allResults = [];
-let selectedResultIndex = -1;
+  {
+    title: "herramientas",
+    url: "https://www.example.com/page5"
+  },
+  {
+    title: "Tuberia",
+    url: "https://www.example.com/page5"
+  },
+  {
+    title: "Agricola",
+    url: "https://www.example.com/page5"
+  },
+  {
+    title: "Pinturas",
+    url: "https://www.example.com/page5"
+  },
+  {
+    title: "Cubiertas",
+    url: "https://www.example.com/page5"
+  },
 
-searchInput.addEventListener('click', () => {
-  if (allResults.length === 0) {
-      allResults = database;
+  {
+    title: "Sika 1 1kg",
+    url: "https://www.example.com/page6"
   }
-  displayResults(allResults);
-});
+  // Agrega más datos de ejemplo si es necesario
+];
 
-searchInput.addEventListener('input', () => {
-  const query = searchInput.value.toLowerCase();
-  const filteredResults = allResults.filter(item => item.title.toLowerCase().includes(query));
-  displayResults(filteredResults);
-});
+var currentIndex = -1;
 
-searchInput.addEventListener('blur', () => {
-  // Delay closing the results to allow clicking on a result
-  setTimeout(() => {
-      searchResults.style.display = 'none';
-  }, 200);
-});
+function search() {
+  var input = document.getElementById("searchInput");
+  var searchTerm = input.value.toLowerCase();
+  var results = document.getElementById("searchResults");
+  results.innerHTML = "";
 
-searchResults.addEventListener('click', (event) => {
-  const selectedResult = event.target.getAttribute('data-url');
-  if (selectedResult) {
-      window.location.href = selectedResult;
+  if (searchTerm.trim() === "") {
+    return;
   }
-  searchInput.value = event.target.textContent;
-  errorMessage.textContent = '';
-});
 
-searchInput.addEventListener('keydown', (event) => {
-  if (event.key === 'Enter') {
-      const firstResult = searchResults.querySelector('li');
-      if (firstResult) {
-          const selectedResult = firstResult.getAttribute('data-url');
-          if (selectedResult) {
-              window.open(selectedResult, '_blank');
-          }
-          searchInput.value = firstResult.textContent;
-          errorMessage.textContent = '';
-      }
-      searchResults.style.display = 'none';
-  } else if (event.key === 'ArrowUp' || event.key === 'ArrowDown') {
-      const results = searchResults.getElementsByTagName('li');
-      const numResults = results.length;
-      if (numResults > 0) {
-          if (event.key === 'ArrowUp') {
-              selectedResultIndex = (selectedResultIndex - 1 + numResults) % numResults;
-          } else {
-              selectedResultIndex = (selectedResultIndex + 1) % numResults;
-          }
-          Array.from(results).forEach((result, index) => {
-              if (index === selectedResultIndex) {
-                  result.classList.add('selected');
-              } else {
-                  result.classList.remove('selected');
-              }
-          });
-      }
-  }
-});
+  var count = 0;
 
-document.addEventListener('click', (event) => {
-  if (!searchInput.contains(event.target)) {
-      searchResults.style.display = 'none';
-  }
-});
+  datos.forEach(function(dato, index) {
+    if (count >= 8) {
+      return;
+    }
 
-function displayResults(results) {
-  searchResults.innerHTML = '';
-  if (results.length > 0) {
-      results.forEach(result => {
-          const li = document.createElement('li');
-          li.textContent = result.title;
-          li.setAttribute('data-url', result.url);
-          searchResults.appendChild(li);
+    if (dato.title.toLowerCase().includes(searchTerm)) {
+      var li = document.createElement("li");
+      var a = document.createElement("a");
+      a.textContent = dato.title;
+      a.href = dato.url;
+      li.appendChild(a);
+      li.addEventListener("mouseover", function() {
+        setCurrentIndex(index);
       });
-      searchResults.style.display = 'block';
-      errorMessage.textContent = '';
-  } else {
-      searchResults.style.display = 'none';
-      errorMessage.textContent = 'No se encontraron resultados.';
+      results.appendChild(li);
+
+      count++;
+    }
+  });
+
+  if (currentIndex >= 0 && currentIndex < results.children.length) {
+    results.children[currentIndex].classList.add("selected");
+  }
+
+  var extraResults = results.children.length - 8;
+  if (extraResults > 0) {
+    for (var i = results.children.length - 1; i >= 8; i--) {
+      results.removeChild(results.children[i]);
+    }
   }
 }
 
+function setCurrentIndex(index) {
+  var results = document.getElementById("searchResults");
+  if (currentIndex >= 0 && currentIndex < results.children.length) {
+    results.children[currentIndex].classList.remove("selected");
+  }
+  currentIndex = index;
+  if (currentIndex >= 0 && currentIndex < results.children.length) {
+    results.children[currentIndex].classList.add("selected");
+  }
+}
+
+function performSearch() {
+  var input = document.getElementById("searchInput");
+  var searchTerm = input.value.toLowerCase();
+
+  // Redirigir a la primera página coincidente
+  for (var i = 0; i < datos.length; i++) {
+    if (datos[i].title.toLowerCase().includes(searchTerm)) {
+      window.location.href = datos[i].url;
+      return;
+    }
+  }
+}
+
+function handleKeyPress(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    if (currentIndex === -1) {
+      performSearch();
+    } else {
+      var results = document.getElementById("searchResults");
+      var selectedResult = results.children[currentIndex];
+      var selectedLink = selectedResult.firstChild;
+      window.location.href = selectedLink.href;
+    }
+  } else if (event.key === "ArrowUp") {
+    event.preventDefault();
+    setCurrentIndex(currentIndex - 1);
+  } else if (event.key === "ArrowDown") {
+    event.preventDefault();
+    setCurrentIndex(currentIndex + 1);
+  }
+}
 /* PRODUCTOS***/
 function filterItems(option) {
     var items = document.getElementsByClassName("item");
@@ -111,3 +146,4 @@ function filterItems(option) {
     }
   }
 /****FIN DE PRODUCTOS */
+

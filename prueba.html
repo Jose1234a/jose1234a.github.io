@@ -1,76 +1,137 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contenedor con cuatro columnas de tarjetas</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+  <title>Offcanvas Demo</title>
   <style>
-    .card {
-      background-color: #ffffff;
-      border: none;
-      border-radius: 10px;
-      color: #242424;
-      box-shadow: 1px 2px rgba(red, green, blue, alpha);
+    body {
+      padding: 20px;
     }
 
-
-    .card-img-top {
-      border-radius: 10px 10px 0 0;
+    .offcanvas {
+      position: fixed;
+      top: 0;
+      left: -300px;
+      width: 300px;
+      height: 100%;
+      background-color: #f1f1f1;
+      transition: left 0.3s ease;
     }
 
-    .card-title {
-      font-size: 20px;
+    .offcanvas.open {
+      left: 0;
+    }
+
+    .content {
+      padding: 20px;
+    }
+
+    button {
       margin-bottom: 10px;
     }
 
-    .card-text {
-      color: #fff;
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #f9f9f9;
+      padding: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      z-index: 50;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-3">
-        <div class="card">
-          <img src="imagen1.jpg" class="card-img-top" alt="Imagen 1">
-          <div class="card-body">
-            <h5 class="card-title">Tarjeta 1</h5>
-            <p class="card-text">Contenido de la tarjeta 1.</p>
+  <button id="openBtn">Abrir</button>
+
+  <div id="offcanvas" class="offcanvas">
+    <button id="closeBtn">Cerrar</button>
+    <div class="content">
+      <h2>Contenido del Offcanvas</h2>
+      <ul>
+        <li class="dropdown">
+          <a href="#">Inicio</a>
+          <div class="dropdown-content">
+            <a href="#">Opción 1</a>
+            <a href="#">Opción 2</a>
+            <a href="#">Opción 3</a>
           </div>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="card">
-          <img src="imagen2.jpg" class="card-img-top" alt="Imagen 2">
-          <div class="card-body">
-            <h5 class="card-title">Tarjeta 2</h5>
-            <p class="card-text">Contenido de la tarjeta 2.</p>
+        </li>
+        <li class="dropdown">
+          <a href="#">Productos</a>
+          <div class="dropdown-content">
+            <a href="#">Producto 1</a>
+            <a href="#">Producto 2</a>
+            <a href="#">Producto 3</a>
           </div>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="card">
-          <img src="imagen3.jpg" class="card-img-top" alt="Imagen 3">
-          <div class="card-body">
-            <h5 class="card-title">Tarjeta 3</h5>
-            <p class="card-text">Contenido de la tarjeta 3.</p>
+        </li>
+        <li class="dropdown">
+          <a href="#">Acerca de</a>
+          <div class="dropdown-content">
+            <a href="#">Subpágina 1</a>
+            <a href="#">Subpágina 2</a>
+            <a href="#">Subpágina 3</a>
           </div>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="card">
-          <img src="imagen4.jpg" class="card-img-top" alt="Imagen 4">
-          <div class="card-body">
-            <h5 class="card-title">Tarjeta 4</h5>
-            <p class="card-text">Contenido de la tarjeta 4.</p>
+        </li>
+        <li class="dropdown">
+          <a href="#">Servicios</a>
+          <div class="dropdown-content">
+            <a href="#">Servicio 1</a>
+            <a href="#">Servicio 2</a>
+            <a href="#">Servicio 3</a>
           </div>
-        </div>
-      </div>
+        </li>
+        <li class="dropdown">
+          <a href="#">Contacto</a>
+          <div class="dropdown-content">
+            <a href="#">Información de contacto</a>
+          </div>
+        </li>
+      </ul>
     </div>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    var openBtn = document.getElementById('openBtn');
+    var closeBtn = document.getElementById('closeBtn');
+    var offcanvas = document.getElementById('offcanvas');
+
+    openBtn.addEventListener('click', function() {
+      offcanvas.classList.add('open');
+    });
+
+    closeBtn.addEventListener('click', function() {
+      offcanvas.classList.remove('open');
+    });
+
+    // Cerrar el Offcanvas al hacer clic fuera del contenido
+    document.body.addEventListener('click', function(event) {
+      if (!offcanvas.contains(event.target) && !openBtn.contains(event.target)) {
+        offcanvas.classList.remove('open');
+      }
+    });
+  </script>
 </body>
 </html>
