@@ -374,6 +374,20 @@ font-family: 'Poppins', sans-serif;
   border-bottom: 5px solid #ffc107;
   font-family: 'Poppins', sans-serif;
   }
+
+  .boton-sub-enlaces-ceramica{
+    padding: 12px 40px;
+    border: 1px solid rgba(0, 0, 0, 0);
+    margin: 12px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    margin-left: 12px;
+    margin-right: 12px;
+    background-color: #292929;
+    color: white;
+    border-bottom: 5px solid #ffc107;
+    font-family: 'Poppins', sans-serif;
+    }
 .boton-sub-enlaces-inicio img a{
 font-family: 'Poppins', sans-serif;
 }
@@ -1084,7 +1098,7 @@ background-color: #dfdfdf;
 }
 
 #hero-2 .btn-get-started {
-  font-family: "Raleway", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 15px;
   letter-spacing: 1px;
@@ -1124,6 +1138,83 @@ background-color: #dfdfdf;
   }
 }
 
+
+/***/
+#hero-3 {
+  width: 100%;
+  height: 80vh;
+  background: url("../img/pagina\ de\ ceramica.png") top center;
+  background-size: cover;
+  position: relative;
+}
+
+
+
+#hero-3 .container-3 {
+  padding-top: 72px;
+}
+
+@media (max-width: 992px) {
+  #hero-3 .container-3 {
+    padding-top: 62px;
+  }
+}
+
+#hero-3 h1 {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+
+#hero-3 h2 {
+  color: #eee;
+  margin: 10px 0 0 0;
+  font-size: 24px;
+}
+
+#hero-3 .btn-get-started {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 35px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin-top: 30px;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+#hero-3 .btn-get-started:hover {
+  background: #5fcf80;
+  border: 2px solid #5fcf80;
+}
+
+@media (min-width: 1024px) {
+  #hero-3 {
+    background-attachment: fixed;
+  }
+}
+
+@media (max-width: 768px) {
+  #hero-3 {
+    height: 100vh;
+  }
+
+  #hero-3 h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  #hero-3 h2 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
 /**FIN DE COVER**/
 
 
@@ -1167,8 +1258,8 @@ transition: all 300ms ease;
 }
 
 .boton-sika-contenedor{
- width: 200px;
- height: 100px;
+ width: 100px;
+ height: 50px;
  margin-left: auto;
   z-index: 9;
   top: 26em;
