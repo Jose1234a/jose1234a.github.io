@@ -10,6 +10,11 @@
  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
+ 
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+<link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+  
   
   <link rel="shortcut icon" href="img/logo.jpg "  >
     
@@ -129,7 +134,7 @@
 
           
 
-            <li class="dropdown"><a  class="a-dropdown" href="#"><span class="span-dropdown">Ferretería</span></a>
+            <li class="dropdown"><a  class="a-dropdown" href="ferreteria.html"><span class="span-dropdown">Ferretería</span></a>
 
                               <ul  class="ul-dropdown" style="display: flex; " >
 
@@ -185,16 +190,17 @@
               
 
               </div>
-              <!--SECCION buscador-->
-              <div id="searchContainer">
-                <input type="text" id="searchInput" placeholder="¿Que deseas buscar?" oninput="search()" onkeydown="handleKeyPress(event)">
-                <div id="searchButtonContainer">
-                  <i id="searchButton" class="fas fa-search" onclick="performSearch()"></i>
-                </div>
-                <ul id="searchResults"></ul>
-              </div>
-                  
-              <!--fin de SECCION buscador-->
+                <!--SECCION buscador-->
+                <div id="searchContainer">
+                      <input type="text" id="searchInput" placeholder="¿ Que deseas buscar ?">
+                      <a href="#" id="searchIcon">
+                          <i class="fas fa-search"></i>
+                      </a>
+                      <ul id="searchResults"></ul>
+               </div>
+                    
+                <!--fin de SECCION buscador-->
+            
       </div>
     </section>
 
@@ -284,8 +290,48 @@
 </div>
 <!--SECCION GIF-->
 
+<!---SECCION PROMOCION 2-->
+<section class="">
+  <div class="contenedor-promocion-2 container-lg">
 
-  
+    <div class="contenedor-1-promocion-2">
+      <div class="container-imagen-1">
+        <a href=""><img src="img/2.png" alt=""></a> 
+      </div>
+    </div>
+
+    <div class="contenedor-2-promocion-2">
+      <div class="contenedor-imagen-2">
+        <a href=""><img src="img/GUADAÑA.png" alt=""></a>
+      </div>   
+      <div class="contenedor-imagen-2">
+        <a href=""><img src="img/GUADAÑA2.png" alt=""></a>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!---SECCION PROMOCION 2 FINAL-->
+
+<!--MARCAS-->
+
+<div class="owl-carousel owl-theme">
+  <div class="item"><h4>1</h4></div>
+  <div class="item"><h4>2</h4></div>
+  <div class="item"><h4>3</h4></div>
+  <div class="item"><h4>4</h4></div>
+  <div class="item"><h4>5</h4></div>
+  <div class="item"><h4>6</h4></div>
+  <div class="item"><h4>7</h4></div>
+  <div class="item"><h4>8</h4></div>
+  <div class="item"><h4>9</h4></div>
+  <div class="item"><h4>10</h4></div>
+  <div class="item"><h4>11</h4></div>
+  <div class="item"><h4>12</h4></div>
+</div>
+<!--FIN DE MARCAS-->
+
+
 <!--boton subir-->
   <div class="boton-subir-contenedor ">
     <a class="boton-subir" href="#boton-subir" ><img src="img/subir.png" width=""  alt="Boton subir"></a> 
@@ -372,8 +418,10 @@
 </footer>
 <!-- End Footer -->
         <script src="js/index.js"></script>
-        <script src="js/main.js"></script>
         
+        <script src="js/jquery.min.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+
         <script src="js/bootstrap.min.js"></script>
         <script src="https://kit.fontawesome.com/xxxxxxxxxx.js" crossorigin="anonymous"></script>
      
