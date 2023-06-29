@@ -82,7 +82,7 @@ var database = [
   { title: "Cuchilla para guadaña pulida calibre 13 1 in Herragro", file: "archivo9.html" },/***CUCHILLA GUA/HERRAGRO PULIDA C13 1"  */ 
   { title: "Cuchilla para guadaña roja calibre 13 1 in Herragro", file: "archivo9.html" },/***CUCHILLA GUA/HERRAGRO ROJA C13 1"  */ 
   { title: "Surtidor plastico con estaca 1/2 in Forte", file: "archivo9.html" },/***SURTIDOR PLASTICO 1/2" C/ESTACA PLAST FORTE/LEON  */ 
-  { title: "Malle cuadrada plastica blanca 12x12 1.50 x 30 mts largo", file: "archivo9.html" },/***MALLA CUADRADA PLASTICA BLANCA 12X12 1.50X30 MTS M15SB12 STAND  */ 
+  { title: "Malla cuadrada plastica blanca 12x12 1.50 x 30 mts largo", file: "archivo9.html" },/***MALLA CUADRADA PLASTICA BLANCA 12X12 1.50X30 MTS M15SB12 STAND  */ 
   { title: "Universal pvc 2 1/2 in ERA", file: "archivo9.html" },/***UNIVERSAL PVC 21/2" ERA  */ 
 
   
@@ -223,19 +223,7 @@ function filterItems(option) {
 
 
 
-$('.owl-carousel').owlCarousel({
-  loop:true,
-  margin:10,
-  nav:true,
-  responsive:{
-      0:{
-          items:1
-      },
-      600:{
-          items:3
-      },
-      1000:{
-          items:5
-      }
-  }
-})
+
+const portfolioLightbox = GLightbox({
+ selector: '.portfolio-lightbox'
+});

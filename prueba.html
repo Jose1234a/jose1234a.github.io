@@ -1,263 +1,139 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Búsqueda de Resultados</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-
-        h1 {
-            color: #333;
-            text-align: center;
-            text-decoration: none;
-        }
-        
-
-        #searchContainer {
-            position: relative;
-            display: inline-block;
-            width: 300px;
-            text-decoration: none;  
-        }
-
-        #searchInput {
-            width: 100%;
-            padding: 10px;
-            font-size: 16px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            box-sizing: border-box;
-            outline: none;
-            background-color: #f9f9f9;
-            transition: box-shadow 0.3s ease;
-            text-decoration: none;
-        }
-
-        #searchInput:focus {
-            box-shadow: 0 0 5px #aaa;
-            text-decoration: none;
-        }
-
-        #searchIcon {
-            position: absolute;
-            top: 50%;
-            right: 10px;
-            transform: translateY(-50%);
-            color: #999;
-            cursor: pointer;
-            transition: color 0.3s ease;
-            text-decoration: none;
-        }
-
-        #searchIcon:hover {
-            color: #333;
-        }
-
-        #searchResults {
-            position: absolute;
-            top: calc(100% + 5px);
-            left: 0;
-            width: 100%;
-            max-height: auto;
-           
-            background-color: #ffffff;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            padding: 10px;
-            box-sizing: border-box;
-            display: none;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-        }
-        #searchResults a {
-         text-decoration: none;
-         color: #333;
-        }
-
-
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            text-decoration: none;
-            color: black;
-        }
-
-        li {
-            margin-bottom: 10px;
-            cursor: pointer;
-            padding: 5px;
-            background-color: #fff;
-            border-radius: 3px;
-            text-decoration: none;
-            transition: background-color 0.3s ease;
-        }
-
-        li:hover {
-            background-color: #f1f1f1;
-            text-decoration: none;
-        }
-
-        li.selected {
-            background-color: #f5f2f2;
-        }
-
-        h3 {
-            margin: 0;
-            font-size: 18px;
-            color: #333;
-            text-decoration: none;
-        }
-
-        p {
-            margin: 0;
-            text-decoration: none;
-            color: #666;
-        }
-    </style>
+  <title>Sistema de Filtrado de Productos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f8f9fa;
+      padding-top: 20px;
+    }
+    
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .filters {
+      margin-bottom: 20px;
+    }
+    
+    .filter-btn {
+      margin-right: 10px;
+    }
+    
+    .product-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      perspective: 1000px;
+    }
+    
+    .product {
+      border: 1px solid #ccc;
+      background-color: #fff;
+      padding: 10px;
+      margin: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      border-radius: 4px;
+      transform-style: preserve-3d;
+      transition: transform 0.3s ease;
+    }
+    
+    .product:hover {
+      transform: scale(1.1);
+    }
+    
+    .product-content {
+      position: relative;
+      transform-style: preserve-3d;
+    }
+    
+    .product-image {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+      transition: transform 0.3s ease;
+    }
+    
+    .product:hover .product-image {
+      transform: scale(1.1);
+    }
+    
+    h1, h3 {
+      margin: 0;
+    }
+  </style>
 </head>
 <body>
-    <h1>Búsqueda de Resultados</h1>
+  <div class="container">
+    <h1 class="mt-4">Sistema de Filtrado de Productos</h1>
 
-    <div id="searchContainer">
-        <input type="text" id="searchInput" placeholder="Ingresa tu búsqueda">
-        <a href="#" id="searchIcon">
-            <i class="fas fa-search"></i>
-        </a>
-        <ul id="searchResults"></ul>
+    <div class="filters mt-4">
+      <label>Categorías:</label>
+      <button class="btn btn-primary filter-btn" data-category="all">Todos</button>
+      <button class="btn btn-primary filter-btn" data-category="electronics">Electrónica</button>
+      <button class="btn btn-primary filter-btn" data-category="clothing">Ropa</button>
+      <button class="btn btn-primary filter-btn" data-category="books">Libros</button>
     </div>
 
-    <script>
-        var database = [
-            { title: "Sika 1 1kg", file: "archivo1.html" },
-            { title: "Sika fill 12 power 5kg", file: "archivo2.html" },
-            { title: "Resultado 3", file: "archivo3.html" },
-            { title: "Resultado 4", file: "archivo4.html" },
-            { title: "Resultado 5", file: "archivo5.html" },
-            { title: "Resultado 6", file: "archivo6.html" },
-            { title: "Resultado 7", file: "archivo7.html" },
-            { title: "Resultado 8", file: "archivo8.html" },
-            { title: "Resultado 9", file: "archivo9.html" },
-            { title: "Resultado 10", file: "archivo10.html" }
-        ];
+    <div class="product-container">
+      <div class="product electronics">
+        <div class="product-content">
+          <img src="img/1.png" alt="Producto de Electrónica" class="product-image">
+          <h3>Producto 1 (Electrónica)</h3>
+          <p>Descripción del producto 1.</p>
+        </div>
+      </div>
 
-        var searchInput = document.getElementById("searchInput");
-        var searchIcon = document.getElementById("searchIcon");
-        var searchResults = document.getElementById("searchResults");
-        var selectedResultIndex = -1;
-        var lastDisplayedResults = [];
+      <div class="product clothing">
+        <div class="product-content">
+          <img src="img/clothing-product.jpg" alt="Producto de Ropa" class="product-image">
+          <h3>Producto 2 (Ropa)</h3>
+          <p>Descripción del producto 2.</p>
+        </div>
+      </div>
 
-        // Función para mostrar los resultados de búsqueda
-        function displayResults(results) {
-            searchResults.innerHTML = "";
+      <div class="product books">
+        <div class="product-content">
+          <img src="img/books-product.jpg" alt="Producto de Libros" class="product-image">
+          <h3>Producto 3 (Libros)</h3>
+          <p>Descripción del producto 3.</p>
+        </div>
+      </div>
 
-            results.slice(0, 8).forEach(function (result, index) {
-                var li = document.createElement("li");
-                var a = document.createElement("a");
-                a.href = result.file;
-                a.textContent = result.title;
-                li.appendChild(a);
-                searchResults.appendChild(li);
+      <div class="product electronics">
+        <div class="product-content">
+          <img src="img/electronics-product.jpg" alt="Producto de Electrónica" class="product-image">
+          <h3>Producto 4 (Electrónica)</h3>
+          <p>Descripción del producto 4.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
-                li.addEventListener("click", function () {
-                    window.location.href = result.file;
-                });
-            });
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const products = document.querySelectorAll('.product');
 
-            if (results.length > 0) {
-                searchResults.style.display = "block";
-                lastDisplayedResults = results;
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const selectedCategory = btn.getAttribute('data-category');
+
+          products.forEach(product => {
+            if (selectedCategory === 'all') {
+              product.style.display = 'block';
+            } else if (product.classList.contains(selectedCategory)) {
+              product.style.display = 'block';
             } else {
-                searchResults.style.display = "none";
+              product.style.display = 'none';
             }
-        }
-        // Función para actualizar el resultado seleccionado
-        function updateSelectedResult(index) {
-            var results = document.querySelectorAll("#searchResults li");
-
-            results.forEach(function (result, i) {
-                if (i === index) {
-                    result.classList.add("selected");
-                } else {
-                    result.classList.remove("selected");
-                }
-            });
-
-            selectedResultIndex = index;
-        }
-
-        // Función para actualizar el ancho del contenedor de resultados
-        function updateResultsContainerWidth() {
-            var searchContainerWidth = searchInput.offsetWidth;
-            searchResults.style.width = searchContainerWidth + "px";
-        }
-
-        // Evento al hacer clic en el icono de búsqueda
-        searchIcon.addEventListener("click", function () {
-            var searchText = searchInput.value.toLowerCase();
-            var results = database.filter(function (result) {
-                return result.title.toLowerCase().includes(searchText);
-            });
-
-            displayResults(results);
-
-            if (results.length > 0) {
-                updateSelectedResult(0);
-            }
+          });
         });
-
-        // Evento al escribir en el campo de búsqueda
-        searchInput.addEventListener("input", function () {
-            var searchText = searchInput.value.toLowerCase();
-            var results = database.filter(function (result) {
-                return result.title.toLowerCase().includes(searchText);
-            });
-
-            displayResults(results);
-
-            if (results.length > 0) {
-                updateSelectedResult(0);
-            }
-        });
-
-        // Evento al hacer clic fuera del buscador para cerrar los resultados
-        document.addEventListener("click", function (event) {
-            var isClickInsideSearchContainer = searchContainer.contains(event.target);
-            if (!isClickInsideSearchContainer) {
-                searchResults.style.display = "none";
-            }
-        });
-
-        // Evento al hacer clic en el campo de búsqueda para mostrar los últimos resultados
-        searchInput.addEventListener("click", function () {
-            if (lastDisplayedResults.length > 0) {
-                displayResults(lastDisplayedResults);
-            }
-        });
-
-        // Escuchar eventos de teclado para navegar por los resultados y tomar el primer resultado al presionar "Enter"
-        searchInput.addEventListener("keydown", function (event) {
-            var key = event.key;
-            var results = document.querySelectorAll("#searchResults li");
-
-            if (key === "ArrowUp" && selectedResultIndex > 0) {
-                updateSelectedResult(selectedResultIndex - 1);
-            } else if (key === "ArrowDown" && selectedResultIndex < results.length - 1) {
-                updateSelectedResult(selectedResultIndex + 1);
-            } else if (key === "Enter" && selectedResultIndex !== -1) {
-                var selectedResult = results[selectedResultIndex];
-                var link = selectedResult.querySelector("a");
-                var file = link.getAttribute("href");
-                window.location.href = file;
-            }
-        });
-
-        // Actualizar el ancho del contenedor de resultados al cargar la página y al cambiar el tamaño de la ventana
-        window.addEventListener("DOMContentLoaded", updateResultsContainerWidth);
-        window.addEventListener("resize", updateResultsContainerWidth);
-    </script>
+      });
+    });
+  </script>
 </body>
 </html>
-
