@@ -1376,7 +1376,6 @@ transition: all 300ms ease;
 }
 .contenedor-1-promocion-2{
   width: 1500px;
-
 }
 .contenedor-2-promocion-2{
     width: 1500px;
@@ -1457,6 +1456,34 @@ transition: all 300ms ease;
   justify-content: center;
   margin: auto;
   justify-self: center;
+}
+}
+@media (max-width: 557px) {
+
+  .contenedor-2-promocion-2{
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    
+}
+.contenedor-promocion-2{
+  display: flex;
+  flex-direction: column;
+  max-height: 1200px;
+  justify-content: center;
+  margin: auto;
+  justify-self: center;
+}
+.contenedor-1-promocion-2{
+  width: 400px;
+}
+}
+@media (max-width:467px) {
+
+
+.contenedor-1-promocion-2{
+  width: 300px;
 }
 }
 /*FIN DE PROMOCION 2***/
