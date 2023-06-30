@@ -44,7 +44,7 @@ var database = [
   { title: "Piso nordico cuero 61x61 cm", file: "archivo9.html" },/*** PISO NORDICO CUERO 61X61  */
   { title: "Piso baranoa cafe 51x51 cm", file: "archivo9.html" },/*** PISO BARANOA CAFÉ 51X51  */
   { title: "Piso arabella mix 60x60 cm", file: "archivo9.html" },/*** PISO ARABELLA MIX 60X60  */
-  { title: "Llave lavaplatos mezclador Gricol 8 in RF:01-2828-11", file: "product/0020160256.html" },/*** MEZCL LVP GRC 8" PRISTINA RF:01-2828-11  */
+  { title: "Llave lavaplatos mezclador Gricol 8 in RF:01-2828-11", file: "0020160256.html", },/*** MEZCL LVP GRC 8" PRISTINA RF:01-2828-11  */
   { title: "Llave lavamanos cromada solid Grival", file: "archivo9.html" },/*** LLV LVM CROMO SOLID GRIVAL  */
   { title: "Llave lavaplatos mono control cromada solid Grival", file: "archivo9.html" },/*** LLV LVP CROMO M/CONTROL SOLID GRIVAL  */
   { title: "Registro de bola para ducha cromada Solid Grival", file: "archivo9.html" },/*** REGIS BOLA DUCHA SOLID CROMO GRIVAL  */
