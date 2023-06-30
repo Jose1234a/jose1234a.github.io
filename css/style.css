@@ -1819,7 +1819,327 @@ width: 32px;
 }
 /*end**/
 
-/*otros productos*/
+/*fin de otros productos*/
+
+
+
+/*************************************************/
+/***SECCION contenedor-general-producto-nombre***/
+/***********************************************/
+.contenedor-general-producto-nombre{
+  display: flex;
+  width:100%;
+  justify-content: center;
+  justify-self: center;
+  margin-right: auto; 
+}
+.contenedor-general-descripcion-medidas{
+  display: flex;
+  width:100%;
+  justify-content: center;
+  justify-self: center;
+  margin-right: auto; 
+}
+.producto{
+  width: 600px;
+  height: 100%;
+  margin-right: auto;
+}
+.descripcion{
+  width: 600px;
+  height: 100%;
+  margin-right: auto;
+  margin-bottom: 22px;
+}
+@media (max-width:628px){
+  .descripcion{
+    width: 400px;
+    height: 100%;
+    margin-right: auto;
+    margin-bottom: 22px;
+  }
+}
+@media (max-width:565px){
+  .descripcion{
+    width: 250px;
+    height: 100%;
+    margin-right: auto;
+    margin-bottom: 22px;
+  }
+  .nombre-descripcion-img{
+    width: 100%;
+    margin-right: auto;
+    justify-content: center;
+  }
+  .nombre-descripcion-img img{
+    width: 100%;
+    border-radius: 10px;
+ }
+}
+
+
+
+.descripcion-medidas{
+  margin-top: 22px;
+  font-size: 1px;
+
+}
+.descripcion-medidas h2{
+  margin-top: 22px;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgb(139, 139, 139);
+}
+
+.img-button-producto-img{
+  width: 100%;
+  padding: 0px;
+  margin: 22px;
+}
+.nombre-descripcion{
+  width: 100%;
+  height: 100%;
+  justify-content: left;
+  display: flex;
+  flex-direction: column;
+  margin-left: 100px;
+  justify-self: left;
+}
+.nombre-descripcion2{
+  width: 100%;
+  height: 100%;
+  justify-content: left;
+  display: flex;
+  flex-direction: column;
+  justify-self: left;
+  margin-left: 95px;
+}
+
+
+/**/
+.nombre-descripcion-h2{
+  width: 480px;
+  margin-right: auto;
+  justify-content: center;
+}
+.nombre-descripcion-h2 h2{
+  font-family: "Poppins", sans-serif;
+  font-size: 17px;
+  justify-content: left;
+  justify-self: left;
+  margin: auto;
+  font-weight: 800;
+ }
+ .nombre-descripcion-img{
+  width: 480px;
+  margin-right: auto;
+  justify-content: center; 
+}
+ .nombre-descripcion-img img{
+    width: 100%;
+    margin: auto;
+    border-radius: 10px;
+ }
+ 
+/**/
+
+
+/**/
+.nombre-descripcion-span{
+  width: 500px;
+  margin-right: auto;
+  justify-content: center;
+}
+.nombre-descripcion-span span{
+  font-size: 12px;
+  font-family: "Poppins", sans-serif;
+}
+/**/
+
+
+
+/**/
+.nombre-descripcion-contenedor-legales{
+  width: 500px;
+  margin-right: auto;
+  justify-content: center;
+  margin-top: 92px;
+}
+.nombre-descricpion-medidas{
+  width: 100%;
+}
+/**/
+
+
+/**/
+.nombre-descripcion-boton-cotiza{
+  width: 500px;
+  margin-right: auto;
+  justify-content: left;
+  margin-top: 92px;
+  display: flex;
+  justify-self: left;
+}
+
+.nombre-descripcion-boton-cotiza a button{
+      background-color: #0c3c53;
+      border-radius: 12px;
+      padding: 12px 52px;
+      color: white;
+      font-family: "Poppins", sans-serif;
+      border: 1px solid rgba(0, 0, 0, 0);
+      transition: all 300ms ease;
+}
+.nombre-descripcion-boton-cotiza a button:hover{
+  background-color: #ffffff;
+  border-radius: 12px;
+  color: #0c3c53;
+  font-family: "Poppins", sans-serif;
+  border: 1px solid #0c3c53;
+}
+
+
+@media (max-width: 992px) {
+  .contenedor-general-producto-nombre{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    justify-content: center;
+    justify-self: center;
+    margin-right: auto; 
+  }
+  .contenedor-general-descripcion-medidas{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    justify-content: center;
+    justify-self: center;
+    margin-right: auto; 
+  }
+  .nombre-descripcion2{
+   display: none;
+  }
+  .producto{
+    width: 400px;
+    height: 100%;
+    margin: auto;
+  }
+  .nombre-descripcion{
+    width: 100%;
+    height: 100%;
+    justify-content: left;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 52px;
+    margin-top: 52px;
+    margin-left: 20px;
+    justify-self: left;
+  }
+  .img-button-producto-img{
+    width: 100%;
+    padding: 0px;
+
+  }
+  .nombre-descripcion-contenedor-legales{
+    width: 500px;
+    margin-right: auto;
+    justify-content: center;
+    margin-top: 22px;
+  }
+  
+  
+}
+@media (max-width: 782px) {
+ 
+  .nombre-descripcion-h2{
+    width: 350px;
+    margin-right: auto;
+    justify-content: center;
+  }
+  .nombre-descripcion-span{
+    width: 350px;
+    margin-right: auto;
+    justify-content: center;
+  }
+  .nombre-descripcion-contenedor-legales{
+    width: 350px;
+    margin-right: auto;
+    justify-content: center;
+    margin-top: 52px;
+  }
+  .nombre-descripcion-boton-cotiza{
+    width: 350px;
+    margin-right: auto;
+    justify-content: left;
+    margin-top: 92px;
+    display: flex;
+    justify-self: left;
+  }
+  .nombre-descripcion{
+    width: 60%;
+    height: 100%;
+    justify-content: left;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 52px;
+    margin-top: 52px;
+    margin-left: 20px;
+    justify-self: left;
+  }
+}
+@media (max-width: 480px) {
+ 
+  .nombre-descripcion-h2{
+    width: 270px;
+    margin-right: auto;
+    justify-content: center;
+  }
+  .nombre-descripcion-span{
+    width: 270px;
+    margin-right: auto;
+    justify-content: center;
+  }
+  .nombre-descripcion-contenedor-legales{
+    width: 270px;
+    margin-right: auto;
+    justify-content: center;
+    margin-top: 52px;
+  }
+  .nombre-descripcion-boton-cotiza{
+    width: 270px;
+    margin-right: auto;
+    justify-content: left;
+    margin-top: 92px;
+    display: flex;
+    justify-self: left;
+  }
+  .nombre-descripcion{
+    width: 50%;
+    height: 100%;
+    justify-content: left;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 52px;
+    margin-top: 52px;
+    margin-left: 20px;
+    justify-self: left;
+  }
+  .producto{
+    width: 250px;
+    height: 100%;
+    margin: auto;
+  }
+  .img-button-producto-img{
+    width: 80%;
+    padding: 0px;
+   
+  }
+}
+/*************************************************/
+/***fin de SECCION contenedor-general-producto-nombre***/
+/***********************************************/
+
 
 
 

@@ -1,138 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Sistema de Filtrado de Productos</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <style>
-    body {
-      background-color: #f8f9fa;
-      padding-top: 20px;
+    .swiper-container {
+      width: 100%;
+      height: 400px;
     }
-    
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    
-    .filters {
-      margin-bottom: 20px;
-    }
-    
-    .filter-btn {
-      margin-right: 10px;
-    }
-    
-    .product-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      perspective: 1000px;
-    }
-    
-    .product {
-      border: 1px solid #ccc;
-      background-color: #fff;
-      padding: 10px;
-      margin: 10px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      border-radius: 4px;
-      transform-style: preserve-3d;
-      transition: transform 0.3s ease;
-    }
-    
-    .product:hover {
-      transform: scale(1.1);
-    }
-    
-    .product-content {
-      position: relative;
-      transform-style: preserve-3d;
-    }
-    
-    .product-image {
-      max-width: 100%;
-      height: auto;
-      margin-bottom: 10px;
-      transition: transform 0.3s ease;
-    }
-    
-    .product:hover .product-image {
-      transform: scale(1.1);
-    }
-    
-    h1, h3 {
-      margin: 0;
+
+    .swiper-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1 class="mt-4">Sistema de Filtrado de Productos</h1>
-
-    <div class="filters mt-4">
-      <label>Categorías:</label>
-      <button class="btn btn-primary filter-btn" data-category="all">Todos</button>
-      <button class="btn btn-primary filter-btn" data-category="electronics">Electrónica</button>
-      <button class="btn btn-primary filter-btn" data-category="clothing">Ropa</button>
-      <button class="btn btn-primary filter-btn" data-category="books">Libros</button>
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="img/ceramica2.png" alt="Imagen 1"></div>
+      <div class="swiper-slide"><img src="img/ceramica2.png" alt="Imagen 2"></div>
+      <div class="swiper-slide"><img src="img/ceramica2.png" alt="Imagen 3"></div>
+      <div class="swiper-slide"><img src="img/ceramica2.png" alt="Imagen 4"></div>
     </div>
-
-    <div class="product-container">
-      <div class="product electronics">
-        <div class="product-content">
-          <img src="img/1.png" alt="Producto de Electrónica" class="product-image">
-          <h3>Producto 1 (Electrónica)</h3>
-          <p>Descripción del producto 1.</p>
-        </div>
-      </div>
-
-      <div class="product clothing">
-        <div class="product-content">
-          <img src="img/clothing-product.jpg" alt="Producto de Ropa" class="product-image">
-          <h3>Producto 2 (Ropa)</h3>
-          <p>Descripción del producto 2.</p>
-        </div>
-      </div>
-
-      <div class="product books">
-        <div class="product-content">
-          <img src="img/books-product.jpg" alt="Producto de Libros" class="product-image">
-          <h3>Producto 3 (Libros)</h3>
-          <p>Descripción del producto 3.</p>
-        </div>
-      </div>
-
-      <div class="product electronics">
-        <div class="product-content">
-          <img src="img/electronics-product.jpg" alt="Producto de Electrónica" class="product-image">
-          <h3>Producto 4 (Electrónica)</h3>
-          <p>Descripción del producto 4.</p>
-        </div>
-      </div>
-    </div>
+    <div class="swiper-pagination"></div>
   </div>
 
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script>
-    window.addEventListener('DOMContentLoaded', () => {
-      const filterBtns = document.querySelectorAll('.filter-btn');
-      const products = document.querySelectorAll('.product');
-
-      filterBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-          const selectedCategory = btn.getAttribute('data-category');
-
-          products.forEach(product => {
-            if (selectedCategory === 'all') {
-              product.style.display = 'block';
-            } else if (product.classList.contains(selectedCategory)) {
-              product.style.display = 'block';
-            } else {
-              product.style.display = 'none';
-            }
-          });
-        });
-      });
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 'auto',
+      loop: true,
+      centeredSlides: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+      }
     });
   </script>
 </body>
