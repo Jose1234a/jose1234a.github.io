@@ -2136,6 +2136,126 @@ width: 32px;
    
   }
 }
+/**seccion marcas*/
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.logos {
+  overflow: hidden;
+  padding: 37px 0;
+  background: white;
+  white-space: nowrap;
+  position: relative;
+}
+
+.h2-marcas{
+  font-size: 22px;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 12px;
+}
+.conatiner-vertodas-marcas{
+  width: 200px;
+  margin-left: auto;
+  margin-right: 102px;
+}
+.conatiner-vertodas-marcas a{
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+}
+.conatiner-vertodas-marcas a button{
+      padding: 5px 15px;
+      border: 1px solid rgba(0, 0, 0, 0);
+      background-color: #0c3c53;
+      color: white;
+      border-radius: 10px;
+      transition: all 300ms ease;
+ }
+ .conatiner-vertodas-marcas a button:hover{
+      opacity: 0.8;
+
+}
+@media (max-width: 1274px) {
+  .h2-marcas{
+    font-size: 22px;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 12px;
+    margin-top: 82px;
+  }
+  .conatiner-vertodas-marcas{
+    width: 100px;
+    margin-left: auto;
+    margin-right: 102px;
+  }
+  .conatiner-vertodas-marcas{
+    width: 250px;
+    margin-left: auto;
+    margin-right: 52px;
+  }
+}
+@media (max-width: 595px) {
+
+  .conatiner-vertodas-marcas{
+    width: 100px;
+    margin: auto;
+
+  }
+  .conatiner-vertodas-marcas a{
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+  }
+  .h2-marcas{
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 12px;
+    margin-top: 82px;
+  }
+}
+
+.logos:before,
+.logos:after {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+.logos:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+}
+
+.logos:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+}
+
+.logos:hover .logos-slide {
+  animation-play-state: paused;
+}
+
+.logos-slide {
+  display: inline-block;
+  animation: 35s slide infinite linear;
+}
+
+.logos-slide img {
+  height: 40px;
+  margin: 0 40px;
+}
+
+/*fin de seccion marcas */
+
 /*************************************************/
 /***fin de SECCION contenedor-general-producto-nombre***/
 /***********************************************/

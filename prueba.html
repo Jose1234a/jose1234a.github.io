@@ -1,41 +1,102 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Infinite Slider - Bootstrap 5</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css">
   <style>
-    .swiper-container {
-      width: 100%;
-      height: 400px;
+    .slider-container {
+      overflow: hidden;
+      max-width: 600px; /* Ajusta el tamaño del contenedor según tus necesidades */
+      margin: 0 auto;
     }
 
-    .swiper-slide img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+    .slider-wrapper {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+
+    .slider-item {
+      flex: 0 0 100%;
+      max-width: 100%;
     }
   </style>
 </head>
 <body>
-  <div class="swiper-container">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide"><img src="img/ceramica2.png" alt="Imagen 1"></div>
-      <div class="swiper-slide"><img src="img/ceramica2.png" alt="Imagen 2"></div>
-      <div class="swiper-slide"><img src="img/ceramica2.png" alt="Imagen 3"></div>
-      <div class="swiper-slide"><img src="img/ceramica2.png" alt="Imagen 4"></div>
+  <div class="container">
+    <h1>Infinite Slider</h1>
+
+    <div class="slider-container">
+      <div class="slider-wrapper">
+        <div class="slider-item">
+          <img src="image1.jpg" alt="Image 1">
+        </div>
+        <div class="slider-item">
+          <img src="image2.jpg" alt="Image 2">
+        </div>
+        <div class="slider-item">
+          <img src="image3.jpg" alt="Image 3">
+        </div>
+        <!-- Add more slider items as needed -->
+      </div>
     </div>
-    <div class="swiper-pagination"></div>
   </div>
 
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-    var swiper = new Swiper('.swiper-container', {
-      slidesPerView: 'auto',
-      loop: true,
-      centeredSlides: true,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true
+    // Infinite Slider
+    const sliderWrapper = document.querySelector('.slider-wrapper');
+    const sliderItems = Array.from(document.querySelectorAll('.slider-item'));
+
+    const firstItemClone = sliderItems[0].cloneNode(true);
+    const lastItemClone = sliderItems[sliderItems.length - 1].cloneNode(true);
+
+    sliderWrapper.appendChild(firstItemClone);
+    sliderWrapper.insertBefore(lastItemClone, sliderItems[0]);
+
+    let slideWidth = sliderItems[0].offsetWidth;
+    let currentPosition = -slideWidth;
+
+    sliderWrapper.style.transform = `translateX(${currentPosition}px)`;
+
+    function moveSlider(direction) {
+      if (direction === 'next') {
+        currentPosition -= slideWidth;
+      } else if (direction === 'prev') {
+        currentPosition += slideWidth;
       }
+
+      sliderWrapper.style.transition = 'transform 0.5s ease';
+      sliderWrapper.style.transform = `translateX(${currentPosition}px)`;
+
+      setTimeout(() => {
+        if (direction === 'next' && currentPosition === -(sliderItems.length - 1) * slideWidth) {
+          sliderWrapper.style.transition = 'none';
+          currentPosition = -slideWidth;
+          sliderWrapper.style.transform = `translateX(${currentPosition}px)`;
+        } else if (direction === 'prev' && currentPosition === 0) {
+          sliderWrapper.style.transition = 'none';
+          currentPosition = -sliderItems.length * slideWidth;
+          sliderWrapper.style.transform = `translateX(${currentPosition}px)`;
+        }
+      }, 500);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const nextButton = document.createElement('button');
+      nextButton.className = 'btn btn-primary';
+      nextButton.innerText = 'Next';
+      nextButton.addEventListener('click', () => moveSlider('next'));
+
+      const prevButton = document.createElement('button');
+      prevButton.className = 'btn btn-primary';
+      prevButton.innerText = 'Previous';
+      prevButton.addEventListener('click', () => moveSlider('prev'));
+
+      const container = document.querySelector('.container');
+      container.appendChild(prevButton);
+      container.appendChild(nextButton);
     });
   </script>
 </body>
